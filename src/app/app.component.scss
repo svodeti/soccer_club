@@ -1,0 +1,18 @@
+::ng-deep .p-menuitem-text{
+    font-size: 36px;
+}
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    color: white;
+}
+::ng-deep .p-menuitem .p-menuitem-link .p-menuitem-text {
+    color: white;
+}
+::ng-deep .p-menubar{
+    background-color: #08162a;
+    border: none;
+    padding: 0%;
+}
+::ng-deep .p-menubar .p-submenu-list {
+    background-color: #08162a;
+    border: none;
+}

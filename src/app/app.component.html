@@ -1,0 +1,16 @@
+<div style="display: flex;width: 100%; flex-direction: column;">
+  <div style="display: flex; width: 100%;padding: 0.5rem;">
+    <img src="./assets/logo.png" width="200" height="200"/>
+    <div style="left:200px;top:150px;position: absolute; background-color: #08162a;
+    display: flex;width: calc(100% - 200px);">
+      <p-menubar [model]="items" ></p-menubar>
+    </div>
+  </div>
+  
+  <div style="height:100%;background-color: teal;">
+    <router-outlet></router-outlet>
+  </div>
+  
+</div>
+
+
