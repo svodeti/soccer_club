@@ -1,1 +1,51 @@
-vnfdlsjnvogfdnogivnfodinboidgfniobnioddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+<br><br>
+<div [style]="{'margin': '3em'}">
+<div style="display: flex; flex-direction: row;justify-content: space-around;">
+  <div>
+<p-card header="Coach" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+      <img src="./assets/wenger.jpg" [style]="{height: '250px'}">
+  </ng-template>
+  Log-in or Register as a Coach!
+  <ng-template pTemplate="footer">
+    <p-button label="Log-in" icon="pi pi-sign-in" (click)="loginScreen()" [style]="{'margin-left': '2.5em'}"></p-button>
+    <p-button label="Sign-up" icon="pi pi-cloud" (click)="signUpScreen()" styleClass="p-button-secondary" [style]="{'margin-left': '2em'}"></p-button>
+  </ng-template>
+</p-card>
+</div>
+<div >
+<p-card header="Coach Admin" [style]="{width: '360px'}" styleClass="p-card-shadow">
+<ng-template pTemplate="header">
+    <img src="./assets/coachAdmin.jpg" [style]="{height: '250px'}">
+</ng-template>
+Log-in or Register as a Coach Admin!
+<ng-template pTemplate="footer">
+  <p-button label="Log-in" icon="pi pi-sign-in" (click)="loginScreen()" [style]="{'margin-left': '2.5em'}"></p-button>
+  <p-button label="Sign-up" icon="pi pi-cloud" (click)="signUpScreen()" styleClass="p-button-secondary" [style]="{'margin-left': '2em'}"></p-button>
+</ng-template>
+</p-card>
+</div>
+<div >
+  <p-card header="Enroll as Coach" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+      <img src="./assets/coachAdmin.jpg" [style]="{height: '250px'}">
+  </ng-template>
+  Enroll as a Coach
+  <ng-template pTemplate="footer">
+    <p-button label="Enroll as Coach" icon="pi pi-sign-in" (click)="loginScreen()" [style]="{'margin-left': '2.5em'}"></p-button>
+  </ng-template>
+  </p-card>
+  </div>
+<p-card header="Schedules" [style]="{width: '360px'}" styleClass="p-card-shadow" >
+  <ng-template pTemplate="header">
+      <img src="./assets/schedule.png" [style]="{height: '250px'}">
+  </ng-template>
+  View match schedules!
+  <ng-template pTemplate="footer">
+
+    <p-button label="Schedules" icon="pi pi-arrow-circle-right" [style]="{'margin-left': '6em'}"></p-button>
+  </ng-template>
+  </p-card>
+
+</div>
+</div>

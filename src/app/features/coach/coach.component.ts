@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-coach',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoachComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+  loginScreen(){
+    this.router.navigate(['/login'])
+  }
 
+  signUpScreen(){
+    this.router.navigate(['/signup'])
+  }
 }

@@ -24,10 +24,12 @@ export class AppComponent {
             },
             {
                 label: 'Referee',
+                routerLink:['/referee'],
                 routerLinkActiveOptions: { exact: true }  
             },
             {
               label: 'Player',
+              routerLink:['/player'],
               routerLinkActiveOptions: { exact: true }  
             },
             {

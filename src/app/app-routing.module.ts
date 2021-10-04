@@ -15,6 +15,26 @@ const routes: Routes = [
     path: "coach",
     loadChildren : () => import ("./features/coach/coach.module")
     .then( (m) => m.CoachModule)
+  },
+  {
+    path: "login",
+    loadChildren : () => import ("./features/login/login.module")
+    .then( (m) => m.LoginModule)
+  },
+  {
+    path: "signup",
+    loadChildren : () => import ("./features/signup/signup.module")
+    .then( (m) => m.SignupModule)
+  },
+  {
+    path: "referee",
+    loadChildren : () => import ("./features/referee/referee.module")
+    .then( (m) => m.RefereeModule)
+  },
+  {
+    path: "player",
+    loadChildren : () => import ("./features/player/player.module")
+    .then( (m) => m.PlayerModule)
   }
 ];
 

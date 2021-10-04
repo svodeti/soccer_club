@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CoachRoutingModule } from './coach-routing.module';
-import { CoachComponent } from './coach.component';
+import { PlayerRoutingModule } from './player-routing.module';
+import { PlayerComponent } from './player.component';
 
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
-  declarations: [CoachComponent],
+  declarations: [PlayerComponent],
   imports: [
     CommonModule,
-    CoachRoutingModule,
+    PlayerRoutingModule,
     CardModule,
     ButtonModule
   ]
 })
-export class CoachModule { }
+export class PlayerModule { }
