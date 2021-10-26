@@ -18,6 +18,18 @@ export class AppComponent {
                 routerLinkActiveOptions: { exact: true }  
             },
             {
+              label: 'Admin',
+              routerLinkActiveOptions: { exact: true }  
+            },
+            {
+              label: 'Teams & Schedules',
+              routerLinkActiveOptions: { exact: true }  
+            },
+            {
+              label: 'Apply',
+              routerLinkActiveOptions: { exact: true }  
+            },
+            {
                 label: 'Coach',
                 routerLink:['/coach'],
                 routerLinkActiveOptions: { exact: true }  
@@ -28,17 +40,17 @@ export class AppComponent {
                 routerLinkActiveOptions: { exact: true }  
             },
             {
-              label: 'Player',
-              routerLink:['/player'],
+              label: 'Hotels',
               routerLinkActiveOptions: { exact: true }  
             },
             {
-              label: 'Tournament',
+              label: 'FAQS',
               routerLinkActiveOptions: { exact: true }  
             },
-          {
-            label: 'Sponsors',
-        }
+            {
+              label: 'Sponsors',
+              routerLinkActiveOptions: { exact: true }  
+            },
         ];
     }
 }
