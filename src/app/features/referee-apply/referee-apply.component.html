@@ -1,26 +1,42 @@
 
+<div style="margin-left: 400px; margin-top: 100px; background-color:rgb(248, 242, 242); padding-left:100px; padding-top:10px; margin-right:400px;">
+    
+    <div style="margin-left: 125px;">
 
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Name</label>
-</span>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Age</label>
-</span>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Accredition</label>
-</span>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Email ID</label>
-</span>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Nationality</label>
-</span>
-<span class="p-float-label">
-    <input id="float-input" type="text" pInputText> 
-    <label for="float-input">Experience</label>
-</span>
+        <h1>Referee Application</h1><br><br>
+
+    </div>
+
+    <div>
+
+        <label for="fname" style="font-size: 20px;font-weight: 500;">First Name</label><br>
+        <input type="text" id="fname" pInputText [(ngModel)]="value1"> 
+        <br><br><br>
+
+        <label for="lname" style="font-size: 20px;font-weight: 500;">Last Name</label><br>
+        <input type="text" id="lname" pInputText [(ngModel)]="value2"> 
+        <br><br><br>
+
+        <label for="email" style="font-size: 20px;font-weight: 500;">Email ID</label><br>
+        <input type="text" id="email" pInputText [(ngModel)]="value3"> 
+        <br><br><br>
+
+        <label for="accreditation" style="font-size: 20px;font-weight: 500;">Accreditation</label><br>
+        <input type="text" id="accreditation" pInputText [(ngModel)]="value4"> 
+        <br><br><br>
+
+        <label for="nationality" style="font-size: 20px;font-weight: 500;">Nationality</label><br>
+        <input type="text" id="nationality" pInputText [(ngModel)]="value5"> 
+        <br><br><br>
+
+        <label for="age" style="font-size: 20px;font-weight: 500;">Age</label>
+        <p-inputNumber ngDefaultControl inputId="age" [(ngModel)]="value6"> 
+        </p-inputNumber>
+        <br><br><br>
+
+        <label for="experience" style="font-size: 20px;font-weight: 500;">Experience(in years)</label>
+        <p-inputNumber ngDefaultControl inputId="experience" [(ngModel)]="value7"> 
+        </p-inputNumber>
+        <br><br><br>
+    </div>
+</div>

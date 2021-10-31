@@ -7,13 +7,15 @@ import {InputTextModule} from 'primeng/inputtext';
 import {InputNumberModule} from 'primeng/inputnumber';
 
 
+
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     RefereeApplyRoutingModule,
     InputTextModule,
-    InputNumberModule
+    InputNumberModule,
   ]
 })
 export class RefereeApplyModule { }
