@@ -38,6 +38,7 @@ export class AppComponent {
             },
             {
               label: 'Teams & Schedules',
+              routerLink:['/teams_schedules'],
               routerLinkActiveOptions: { exact: true }  
             },
             {
