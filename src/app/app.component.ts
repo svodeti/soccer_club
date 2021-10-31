@@ -22,11 +22,8 @@ export class AppComponent {
               routerLinkActiveOptions: { exact: true }  
             },
             {
-              label: 'Teams & Schedules',
-              routerLinkActiveOptions: { exact: true }  
-            },
-            {
               label: 'Apply',
+              routerLink:['/apply'],
               routerLinkActiveOptions: { exact: true }  
             },
             {
@@ -40,15 +37,19 @@ export class AppComponent {
                 routerLinkActiveOptions: { exact: true }  
             },
             {
+              label: 'Teams & Schedules',
+              routerLinkActiveOptions: { exact: true }  
+            },
+            {
               label: 'Hotels',
               routerLinkActiveOptions: { exact: true }  
             },
             {
-              label: 'FAQS',
+              label: 'Sponsors',
               routerLinkActiveOptions: { exact: true }  
             },
             {
-              label: 'Sponsors',
+              label: 'FAQS',
               routerLinkActiveOptions: { exact: true }  
             },
         ];

@@ -12,6 +12,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: "apply",
+    loadChildren : () => import ("./features/apply/apply.module")
+    .then( (m) => m.ApplyModule)
+  },
+  {
     path: "coach",
     loadChildren : () => import ("./features/coach/coach.module")
     .then( (m) => m.CoachModule)
