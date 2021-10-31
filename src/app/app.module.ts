@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import {MenubarModule} from 'primeng/menubar';
 import {CarouselModule} from 'primeng/carousel';
 import { HomeComponent } from './features/home/home.component';
+import { RefereeApplyComponent } from './features/referee-apply/referee-apply.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RefereeApplyComponent
   ],
   imports: [
     BrowserModule,
