@@ -26,6 +26,16 @@ const routes: Routes = [
     loadChildren : () => import ("./features/referee/referee.module")
     .then( (m) => m.RefereeModule)
   },
+  {
+    path: "rules",
+    loadChildren : () => import ("./features/rules/rules.module")
+    .then( (m) => m.RulesModule)
+  },
+  {
+    path: "referee-apply",
+    loadChildren : () => import ("./features/referee-apply/referee-apply.module")
+    .then( (m) => m.RefereeApplyModule)
+  },
 ];
 
 @NgModule({
