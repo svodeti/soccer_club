@@ -1,9 +1,9 @@
 
-<div style="margin-left: 400px; margin-top: 100px; background-color:rgb(248, 242, 242); padding-left:100px; padding-top:10px; margin-right:400px;">
+<div style="margin-left: 400px; margin-top: 100px; background-color:rgb(248, 242, 242); padding-left:100px; padding-top:10px; margin-right:400px; padding-bottom:40px;">
     
     <div style="margin-left: 125px;">
 
-        <h1>Referee Application</h1><br><br>
+        <h1>Referee Application*</h1><br><br>
 
     </div>
 
@@ -17,16 +17,12 @@
         <input type="text" id="lname" pInputText [(ngModel)]="value2"> 
         <br><br><br>
 
-        <label for="email" style="font-size: 20px;font-weight: 500;">Email ID</label><br>
+        <label for="email" style="font-size: 20px;font-weight: 500;">Email ID**</label><br>
         <input type="text" id="email" pInputText [(ngModel)]="value3"> 
         <br><br><br>
 
         <label for="accreditation" style="font-size: 20px;font-weight: 500;">Accreditation</label><br>
         <input type="text" id="accreditation" pInputText [(ngModel)]="value4"> 
-        <br><br><br>
-
-        <label for="nationality" style="font-size: 20px;font-weight: 500;">Nationality</label><br>
-        <input type="text" id="nationality" pInputText [(ngModel)]="value5"> 
         <br><br><br>
 
         <label for="age" style="font-size: 20px;font-weight: 500;">Age</label>
@@ -38,5 +34,24 @@
         <p-inputNumber ngDefaultControl inputId="experience" [(ngModel)]="value7"> 
         </p-inputNumber>
         <br><br><br>
+
+
+        <label for="nationality" style="font-size: 20px;font-weight: 500;">Nationality</label><br>
+        <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" 
+        [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Country" id="nationality">
+            <ng-template pTemplate="selectedItem">
+            <div class="country-item country-item-value" *ngIf="selectedCountry">
+                <div>{{selectedCountry.name}}</div>
+            </div>
+            </ng-template>
+            <ng-template let-country pTemplate="item">
+            <div class="country-item">
+                <div>{{country.name}}</div>
+            </div>
+            </ng-template>
+        </p-dropdown>
+        <br><br><br><br>
     </div>
+    *All referee applications are subjected to approval by our team.<br>
+    **If approved, the applicant will recieve their Referee Code via E-mail, this can be used to <div style="margin-left: 18px;">review your match schedules.</div>
 </div>

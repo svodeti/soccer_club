@@ -6,9 +6,6 @@ import { RefereeApplyRoutingModule } from './referee-apply-routing.module';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputNumberModule} from 'primeng/inputnumber';
 
-
-
-
 @NgModule({
   declarations: [],
   imports: [
