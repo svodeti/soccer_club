@@ -19,6 +19,7 @@ export class AppComponent {
             },
             {
               label: 'Admin',
+              routerLink:['/admin'],
               routerLinkActiveOptions: { exact: true }  
             },
             {
@@ -43,6 +44,7 @@ export class AppComponent {
             },
             {
               label: 'Hotels',
+              routerLink:['/hotels'],
               routerLinkActiveOptions: { exact: true }  
             },
             {
@@ -51,6 +53,7 @@ export class AppComponent {
             },
             {
               label: 'FAQS',
+              routerLink:['/faqs'],
               routerLinkActiveOptions: { exact: true }  
             },
         ];
