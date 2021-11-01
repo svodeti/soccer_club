@@ -35,6 +35,16 @@ const routes: Routes = [
     loadChildren : () => import ("./features/teams-schedules/teams-schedules.module")
     .then( (m) => m.TeamsSchedulesModule)
   },
+  {
+    path: "rules",
+    loadChildren : () => import ("./features/rules/rules.module")
+    .then( (m) => m.RulesModule)
+  },
+  {
+    path: "referee-apply",
+    loadChildren : () => import ("./features/referee-apply/referee-apply.module")
+    .then( (m) => m.RefereeApplyModule)
+  },
 ];
 
 @NgModule({
