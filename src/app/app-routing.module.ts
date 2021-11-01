@@ -16,6 +16,11 @@ const routes: Routes = [
     .then( (m) => m.ApplyModule)
   },
   {
+    path: "admin",
+    loadChildren : () => import ("./features/admin/admin.module")
+    .then( (m) => m.AdminModule)
+  },
+  {
     path: "coach",
     loadChildren : () => import ("./features/coach/coach.module")
     .then( (m) => m.CoachModule)
@@ -44,6 +49,26 @@ const routes: Routes = [
     path: "referee-apply",
     loadChildren : () => import ("./features/referee-apply/referee-apply.module")
     .then( (m) => m.RefereeApplyModule)
+  },
+  {
+    path: "coach-apply",
+    loadChildren : () => import ("./features/coach-apply/coach-apply.module")
+    .then( (m) => m.CoachApplyModule)
+  },
+  {
+    path: "team-apply",
+    loadChildren : () => import ("./features/team-apply/team-apply.module")
+    .then( (m) => m.TeamApplyModule)
+  },
+  {
+    path: "faqs",
+    loadChildren : () => import ("./features/faqs/faqs.module")
+    .then( (m) => m.FaqsModule)
+  },
+  {
+    path: "hotels",
+    loadChildren : () => import ("./features/hotels/hotels.module")
+    .then( (m) => m.HotelsModule)
   },
 ];
 
