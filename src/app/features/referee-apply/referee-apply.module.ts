@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { RefereeApplyRoutingModule } from './referee-apply-routing.module';
 
+import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
-import {InputNumberModule} from 'primeng/inputnumber';
+
+import {ButtonModule} from 'primeng/button';
 
 
 
@@ -15,7 +17,8 @@ import {InputNumberModule} from 'primeng/inputnumber';
     CommonModule,
     RefereeApplyRoutingModule,
     InputTextModule,
-    InputNumberModule
+    DropdownModule,
+    ButtonModule
   ]
 })
 export class RefereeApplyModule { }

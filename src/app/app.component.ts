@@ -49,6 +49,7 @@ export class AppComponent {
             },
             {
               label: 'Sponsors',
+              routerLink:['/sponsors'],
               routerLinkActiveOptions: { exact: true }  
             },
             {

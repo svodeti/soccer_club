@@ -70,6 +70,11 @@ const routes: Routes = [
     loadChildren : () => import ("./features/hotels/hotels.module")
     .then( (m) => m.HotelsModule)
   },
+  {
+    path: "sponsors",
+    loadChildren : () => import ("./features/sponsors/sponsors.module")
+    .then( (m) => m.SponsorsModule)
+  },
 ];
 
 @NgModule({
