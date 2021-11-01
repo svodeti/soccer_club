@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   cars:any = [
     {
 			id: "1.jpg",
@@ -21,6 +22,9 @@ export class HomeComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+  }
+  navigateRules(){
+    this.router.navigateByUrl('/rules')
   }
 
 }
