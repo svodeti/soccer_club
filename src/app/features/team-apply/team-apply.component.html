@@ -1,1 +1,190 @@
-<p>team-apply works!</p>
+    
+    <style>
+        table, tr, th, td {
+          border: 1px solid black;
+          font-size: 30px;
+          font-weight: 500;
+          padding : 2 rem;
+          margin:2 rem ;
+        }
+        </style>
+    <div style ="padding : 2 rem;">
+
+    <table style="width:100% ;"> <tr style="font-size:30px"><th><h1>Apply to the 2022 adidas Warrior Memorial Day Classic </h1></th> </tr>
+
+
+
+    <tr><td>
+        <h1> Team Information </h1>
+        <br><label for="Application Group:  " style="font-size: 30px;font-weight: 500;">Application Group:  </label>
+        <p-dropdown [options]="groups"  optionLabel="name" ></p-dropdown>
+        <br><br>
+
+        <label for="Team Name" style="font-size: 30px;font-weight: 500;">Team Name:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="DOB of oldest Player" style="font-size: 30px;font-weight: 500;">DOB of oldest Player:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Coach's Name" style="font-size: 30px;font-weight: 500;">Coach's Name:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Team City" style="font-size: 30px;font-weight: 500;">Team city:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Team State" style="font-size: 30px;font-weight: 500;">Team state:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Team Website" style="font-size: 30px;font-weight: 500;">Team Website:  http://</label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Culb Website" style="font-size: 30px;font-weight: 500;">Club Website: http://</label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Club Name" style="font-size: 30px;font-weight: 500;">Club Name:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="Association" style="font-size: 30px;font-weight: 500;">Association:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <label for="League" style="font-size: 30px;font-weight: 500;">League:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+
+        <br><label for="Play Level Desired:  " style="font-size: 30px;font-weight: 500;">Play level Desired:  </label>
+        <p-dropdown [options]="playlevel"  optionLabel="name" ></p-dropdown>
+        <br><br>
+
+
+        <br><label for="Primary Jersey color:  " style="font-size: 30px;font-weight: 500;">Primary Jersey Color:  </label>
+        <p-dropdown [options]="color"  optionLabel="name" ></p-dropdown>
+        <br><br>
+
+        <br><label for="Alt Jersey color:  " style="font-size: 30px;font-weight: 500;">Alt Jersey Color:  </label>
+        <p-dropdown [options]="color"  optionLabel="name" ></p-dropdown>
+        <br><br>
+
+    </td>
+</tr>
+
+<tr><td>
+    <h1>Contact Information </h1>
+    <label for="Contact Name" style="font-size: 30px;font-weight: 500;">Contact Name:  </label>
+        <input type="text"  pInputText > 
+        <input type="text"  pInputText > 
+        <br><br>
+
+        <br><label for="Contact is:  " style="font-size: 30px;font-weight: 500;">Contact is:  </label>
+        <p-dropdown [options]="contact"  optionLabel="name" ></p-dropdown>
+        <br><br>
+
+        <label for="City/State/Zip" style="font-size: 30px;font-weight: 500;">City/State/Zip:  </label>
+        <input type="text"  pInputText > 
+        <input type="text"  pInputText > 
+        <input type="text"  pInputText >
+        <br><br>
+
+        <label for="Primary Email Address" style="font-size: 30px;font-weight: 500;">Primary Email Address:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+
+        <label for="Phone" style="font-size: 30px;font-weight: 500;">Phone:  </label>
+        <input type="text"  pInputText > 
+        <br><br>
+
+
+</td></tr>
+
+<tr><td>
+<h1> Performance Information</h1>
+<table style="width: 100%;" >
+    <tr>
+        <th>Most Recent Tournament</th>
+        <th>Year</th>
+        <th>Season</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>Tie</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td><input type="text"  pInputText > </td>
+        <td><p-dropdown [options]="year"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="season"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="result"  optionLabel="name" ></p-dropdown></td>
+
+        
+    </tr>
+
+    <tr>
+        <td><input type="text"  pInputText > </td>
+        <td><p-dropdown [options]="year"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="season"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="result"  optionLabel="name" ></p-dropdown></td>
+        
+    </tr>
+
+    <tr>
+        <td><input type="text"  pInputText > </td>
+        <td><p-dropdown [options]="year"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="season"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="result"  optionLabel="name" ></p-dropdown></td>
+        
+    </tr>
+
+    <tr>
+        <td><input type="text"  pInputText > </td>
+        <td><p-dropdown [options]="year"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="season"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="result"  optionLabel="name" ></p-dropdown></td>
+        
+    </tr>
+
+    <tr>
+        <td><input type="text"  pInputText > </td>
+        <td><p-dropdown [options]="year"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="season"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="number"  optionLabel="name" ></p-dropdown></td>
+        <td><p-dropdown [options]="result"  optionLabel="name" ></p-dropdown></td>
+
+        <br><br>
+        
+    </tr>
+
+</table>
+
+</td></tr>
+
+<tr style="display: flex;justify-content: center;padding: 2rem;"><td>
+    <button pButton type="button" label="Submit" ></button>
+</td></tr>
+
+</table>
+
+</div>
+
