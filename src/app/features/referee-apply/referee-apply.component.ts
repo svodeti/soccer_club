@@ -21,5 +21,7 @@ export class RefereeApplyComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  
 
 }
