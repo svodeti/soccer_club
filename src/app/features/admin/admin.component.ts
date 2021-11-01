@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.router.navigateByUrl('/login')
+    //this.router.navigateByUrl('/login')
   }
 
 }

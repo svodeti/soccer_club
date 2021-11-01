@@ -27,11 +27,11 @@ export class AppComponent {
               routerLink:['/apply'],
               routerLinkActiveOptions: { exact: true }  
             },
-            {
-                label: 'Coach',
-                routerLink:['/coach'],
-                routerLinkActiveOptions: { exact: true }  
-            },
+            // {
+            //     label: 'Coach',
+            //     routerLink:['/coach'],
+            //     routerLinkActiveOptions: { exact: true }  
+            // },
             {
                 label: 'Referee',
                 routerLink:['/referee'],
