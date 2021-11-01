@@ -11,6 +11,11 @@ import {CarouselModule} from 'primeng/carousel';
 import { HomeComponent } from './features/home/home.component';
 import { RefereeApplyComponent } from './features/referee-apply/referee-apply.component';
 
+import {DropdownModule} from 'primeng/dropdown';
+
+import {InputTextModule} from 'primeng/inputtext';
+
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -25,7 +30,10 @@ import { RefereeApplyComponent } from './features/referee-apply/referee-apply.co
     AppRoutingModule,
     MenubarModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+    DropdownModule,
+    InputTextModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

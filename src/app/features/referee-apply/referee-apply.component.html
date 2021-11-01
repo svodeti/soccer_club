@@ -7,34 +7,77 @@
 
     </div>
 
-    <div>
+    <style>
+        table, tr, th, td {
+          border: 1px solid black;
+          font-size: 30px;
+          font-weight: 500;
+          padding : 2 rem;
+          margin:2 rem ;
+        }
+        </style>
+    <table style="width: 100%;">
+    <tr><td>
+        <h1>Personal Information </h1>
 
-        <label for="fname" style="font-size: 20px;font-weight: 500;">First Name</label><br>
-        <input type="text" id="fname" pInputText > 
-        <br><br><br>
+        <label for="USSF Number" style="font-size: 30px;font-weight: 500;">USSF Number:  </label>
+        <input type="text"  pInputText >  
+        <br><br>
+        
+        <label for="Contact Name" style="font-size: 30px;font-weight: 500;">Contact Name:  </label>
+            <input type="text"  pInputText > 
+            <input type="text"  pInputText > 
+            <br><br>
+    
+           
+    
+            <label for="City/State/Zip" style="font-size: 30px;font-weight: 500;">City/State/Zip:  </label>
+            <input type="text"  pInputText > 
+            <input type="text"  pInputText > 
+            <input type="text"  pInputText >
+            <br><br>
+    
+            <label for="Primary Email Address" style="font-size: 30px;font-weight: 500;">Primary Email Address:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
+    
+    
+            <label for="Phone" style="font-size: 30px;font-weight: 500;">Phone:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
+    
+    
+    </td></tr>
 
-        <label for="lname" style="font-size: 20px;font-weight: 500;">Last Name</label><br>
-        <input type="text" id="lname" pInputText > 
-        <br><br><br>
+    <tr><td>
+        <h1>Experience and Availability </h1>
 
-        <label for="email" style="font-size: 20px;font-weight: 500;">Email ID</label><br>
-        <input type="text" id="email" pInputText > 
-        <br><br><br>
+        <br><label for="Referee Grade:  " style="font-size: 30px;font-weight: 500;">Referee Grade:  </label>
+        <p-dropdown [options]="number1"  optionLabel="name" ></p-dropdown>
+        <br><br>
 
-        <label for="accreditation" style="font-size: 20px;font-weight: 500;">Accreditation</label><br>
-        <input type="text" id="accreditation" pInputText > 
-        <br><br><br>
+        <label for="Number of Years as USSF Referee" style="font-size: 30px;font-weight: 500;">Number of years as USSF Referee:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
 
-        <label for="nationality" style="font-size: 20px;font-weight: 500;">Nationality</label><br>
-        <input type="text" id="nationality" pInputText > 
-        <br><br><br>
+            <label for="Age" style="font-size: 30px;font-weight: 500;">Age:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
 
-        <label for="age" style="font-size: 20px;font-weight: 500;">Age</label>
+            <label for="Location" style="font-size: 30px;font-weight: 500;">Location:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
 
-        <br><br><br>
+            <label for="Profile" style="font-size: 30px;font-weight: 500;">Profile:  </label>
+            <input type="text"  pInputText > 
+            <br><br>
+    
+    
+    </td></tr>
+    <tr style="display: flex;justify-content: center;padding: 2rem;"><td>
+        <button pButton type="button" label="Submit" ></button>
+    </td></tr>
 
-        <label for="experience" style="font-size: 20px;font-weight: 500;">Experience(in years)</label>
+</table>
 
-        <br><br><br>
-    </div>
 </div>
