@@ -15,7 +15,7 @@ import {InputNumberModule} from 'primeng/inputnumber';
     CommonModule,
     RefereeApplyRoutingModule,
     InputTextModule,
-    InputNumberModule,
+    InputNumberModule
   ]
 })
 export class RefereeApplyModule { }
