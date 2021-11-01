@@ -11,6 +11,7 @@ import {CarouselModule} from 'primeng/carousel';
 import { HomeComponent } from './features/home/home.component';
 import { RefereeApplyComponent } from './features/referee-apply/referee-apply.component';
 import {DropdownModule} from 'primeng/dropdown';
+import {InputNumberModule} from 'primeng/inputnumber';
 
 
 
@@ -27,7 +28,8 @@ import {DropdownModule} from 'primeng/dropdown';
     MenubarModule,
     CarouselModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    InputNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,18 +25,16 @@
         <input type="text" id="accreditation" pInputText [(ngModel)]="value4"> 
         <br><br><br>
 
-        <label for="age" style="font-size: 20px;font-weight: 500;">Age</label>
-        <p-inputNumber ngDefaultControl inputId="age" [(ngModel)]="value6"> 
+        <label for="age" style="font-size: 20px;font-weight: 500;">Age</label><br>
+        <p-inputNumber ngDefaultControl inputId="age" [(ngModel)]="value6" style="width:100%;"> 
         </p-inputNumber>
         <br><br><br>
 
-        <label for="experience" style="font-size: 20px;font-weight: 500;">Experience(in years)</label>
+        <label for="experience" style="font-size: 20px;font-weight: 500;">Experience(in years)</label><br>
         <p-inputNumber ngDefaultControl inputId="experience" [(ngModel)]="value7"> 
         </p-inputNumber>
         <br><br><br>
-
-
-        <label for="nationality" style="font-size: 20px;font-weight: 500;">Nationality</label><br>
+        <label for="nationality" style="font-size: 20px;font-weight: 500;">County Of Residence</label><br>
         <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" 
         [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Country" id="nationality">
             <ng-template pTemplate="selectedItem">
