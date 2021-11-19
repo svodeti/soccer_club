@@ -7,4 +7,11 @@ const routes: Routes = [];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class RefereeDashboardRoutingModule { }
+export class RefereeDashboardRoutingModule { 
+
+  constructor(){}
+
+  ngOnInit(){
+    
+  }
+}
