@@ -75,6 +75,16 @@ const routes: Routes = [
     loadChildren : () => import ("./features/sponsors/sponsors.module")
     .then( (m) => m.SponsorsModule)
   },
+  {
+    path: "referee-admin",
+    loadChildren : () => import ("./features/referee-admin/referee-admin.module")
+    .then( (m) => m.RefereeAdminModule)
+  },
+  {
+    path: "events",
+    loadChildren : () => import ("./features/events/events.module")
+    .then( (m) => m.EventsModule)
+  },
 ];
 
 @NgModule({
