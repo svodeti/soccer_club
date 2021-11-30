@@ -1,1 +1,93 @@
-<p>events works!</p>
+<div style="padding: 2rem;">
+<p-tabView>
+    <p-tabPanel header="Previous Tournaments">
+        <br><br>
+        <div [style]="{'margin': '3em'}">
+        <div style="display: flex; flex-direction: row;justify-content: space-around;">
+        <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+          <ng-template pTemplate="header">
+              <img src="./assets/tournament1.png" [style]="{height: '250px'}">
+          </ng-template>
+          Tournament ended in October. Won by Arsenal 11. 
+        </p-card>
+        <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img src="./assets/tournament2.png" [style]="{height: '250px'}">
+            </ng-template>
+            Tournament ended in October. Won by Knights 11.
+          </p-card>
+          <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img src="./assets/tournament3.png" [style]="{height: '250px'}">
+            </ng-template>
+            Tournament ended in November. Won by FCB.  
+          </p-card>
+          
+        </div>
+        <br><br>
+        <div style="display: flex; flex-direction: row;justify-content: space-around;">
+        <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img src="./assets/tournament4.jpg" [style]="{height: '250px'}">
+            </ng-template>
+            Tournament ended in November. Won by Villa FC. 
+          </p-card>
+          <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img src="./assets/tournament10.jpg" [style]="{height: '250px'}">
+            </ng-template>
+            Tournament ended in November. Won by Villa FC. 
+          </p-card>
+          <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img src="./assets/tournament11.jpg" [style]="{height: '250px'}">
+            </ng-template>
+            Tournament ended in November. Won by Villa FC. 
+          </p-card>
+          </div>
+        </div>
+    </p-tabPanel>
+    <p-tabPanel header="Current Tournaments">
+        <div [style]="{'margin': '3em'}">
+            <div style="display: flex; flex-direction: row;justify-content: space-around;">
+            <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+              <ng-template pTemplate="header">
+                  <img src="./assets/tournament5.jpg" [style]="{height: '250px'}">
+              </ng-template>
+              Ongoing tournament. 
+            </p-card>
+            <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img src="./assets/tournament6.jpg" [style]="{height: '250px'}">
+                </ng-template>
+                Ongoing tournament. 
+              </p-card>
+            </div>
+            </div>
+    </p-tabPanel>
+    <p-tabPanel header="Upcoming Tournaments">
+        <div [style]="{'margin': '3em'}">
+            <div style="display: flex; flex-direction: row;justify-content: space-around;">
+            <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+              <ng-template pTemplate="header">
+                  <img src="./assets/tournament12.png" [style]="{height: '250px'}">
+              </ng-template>
+              Enroll in the tournament before the slots fill up! 
+            </p-card>
+            <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img src="./assets/tournament8.png" [style]="{height: '250px'}">
+                </ng-template>
+                Enroll in the tournament before the slots fill up! 
+              </p-card>
+              <p-card header="Star Championship" [style]="{width: '360px'}" styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img src="./assets/tournament9.png" [style]="{height: '250px'}">
+                </ng-template>
+                Enroll in the tournament before the slots fill up! 
+              </p-card>
+            </div>
+            </div>
+    </p-tabPanel>
+</p-tabView>
+</div>
