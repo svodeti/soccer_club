@@ -1,0 +1,32 @@
+<div class="refereeDiv">
+    <h2> Referee Dashboard</h2>
+
+    <table class="sponsor-table">
+        <thead>
+          <tr>
+            <th *ngFor = "let column of headers">
+              {{column}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr 
+          *ngFor="let tutorial of sponsors; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveTutorial(tutorial, i)">
+            <td>
+              {{tutorial.name}}
+            </td>
+            <td>
+              {{tutorial.mobile_number}}
+            </td>
+            <td>
+              {{tutorial.email_id}}
+            </td>
+            <td>
+              {{tutorial.acceptance_status}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
