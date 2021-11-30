@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-referee-apply',
@@ -10,7 +11,13 @@ export class RefereeApplyComponent implements OnInit {
   
   number1 = [];
 
-  constructor() {
+  refereeForm:FormGroup;
+
+
+  refereeApplications:any=[];
+
+  constructor(private fb:FormBuilder) {
+
 
     this.number1 = [
       {name: '0'},
@@ -24,6 +31,23 @@ export class RefereeApplyComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
+    this.refereeForm= this.fb.group({
+      USSFNumber: [],
+      firstname: [],
+      lastname: [],
+      state: [],
+      agebracket: [],
+      refereegrade: [],
+      exp: [],
+
+      approved:[false]
+    });
+    let applications = localStorage.getItem("applications");
+    if(applications)
+      this.refereeApplications = JSON.parse(applications);
+    
+    console.log(this.refereeApplications)
   }
   
   
