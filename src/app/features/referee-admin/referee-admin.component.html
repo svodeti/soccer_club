@@ -550,10 +550,47 @@
         <p-tabPanel header="Other Applications">
             No Applications
         </p-tabPanel>
-        <p-tabPanel header="Schedules Matches for Referees">
-            <h3> Schedule matches between approved teams.</h3>
-            <div style="margin-bottom: 1rem;"> Click below to schedule matches</div>
-            <button pButton type="button" label="Schedule Matches" ></button>
+        <p-tabPanel header="Schedules Matches">
+            <h3> Schedule for approved referees.</h3>
+            <div style="display: flex; flex-direction: row;margin-bottom: 2rem;">
+                <div style="display: flex; flex-direction: column;margin-right: 2rem;">
+                    <h3>Referee</h3>
+                    <p-dropdown [(ngModel)]="referee" [options]="referees" optionLabel="name"  optionValue="name"
+                     placeholder="Select Referee"></p-dropdown>
+                </div>
+                <div style="display: flex; flex-direction: column;margin-right: 2rem;">
+                    <h3>Date & Time</h3>
+                    <p-calendar [(ngModel)]="dateTime" [showTime]="true" [showSeconds]="true" inputId="time" ></p-calendar>
+                </div>
+                <div style="display: flex; flex-direction: column;margin-right: 2rem;">
+                    <h3>Location</h3>
+                    <p-dropdown [(ngModel)]="location" [options]="locations" optionLabel="name"  optionValue="name"
+                     placeholder="Select location"></p-dropdown>
+                </div>
+                <div style="display: flex;margin-right: 2rem;">
+                    <button pButton type="button" label="Add Schedule" style="display: flex;justify-content: flex-end;"
+                    (click)="addSchedule()"></button>
+                </div>
+            </div>
+            <p-table [value]="schedule" responsiveLayout="scroll">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>No.</th>
+                        <th>Referee Name</th>
+                        <th>Time</th>
+                        <th>Location</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{product.no}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.time}}</td>
+                        <td>{{product.location}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+            
         </p-tabPanel>
     </p-tabView>
 </div>
