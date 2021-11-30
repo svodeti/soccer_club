@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./referee-admin.component.scss']
 })
 export class RefereeAdminComponent implements OnInit {
+  refereeApplications:any = [];
   schedule:any = [];
   count:number = 0;
   referee:any;
@@ -17,10 +18,16 @@ export class RefereeAdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.referees = [
-      {name: 'referee-1'},
-      { name: 'referee-2'}
-    ];
+
+    let refereeApplications = JSON.parse(localStorage.getItem('refereeapplications'));
+    if(refereeApplications)
+    this.refereeApplications = refereeApplications;
+    this.refereeApplications.forEach(element => {
+      if(element.approved){
+        let x = { name: element.teamname};
+        this.referees.push(x);
+      }
+    });
     this.locations = [
       { name: 'location-1'},
       { name: 'location-2'}
@@ -36,5 +43,21 @@ export class RefereeAdminComponent implements OnInit {
     else{
       alert("Fields cannot be empty")
     }
+  }
+
+  approve(refereeId){
+    this.refereeApplications.forEach(element => {
+      if(element.refereeId == refereeId){
+        element.approved = true;
+      }
+    });
+    localStorage.setItem('refereeapplications', JSON.stringify(this.refereeApplications));
+    this.referees = [];
+    this.refereeApplications.forEach(element => {
+      if(element.approved){
+        let x = { name: element.firstname};
+        this.referees.push(x);
+      }
+    });
   }
 }

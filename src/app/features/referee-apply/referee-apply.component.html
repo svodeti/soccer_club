@@ -16,24 +16,26 @@
           margin:2 rem ;
         }
         </style>
+
+<form [formGroup]="refereeForm"  autocomplete="off"> 
     <table style="width: 100%;">
     <tr><td>
         <h1>Personal Information </h1>
 
         <label for="USSF Number" style="font-size: 30px;font-weight: 500;">USSF Number:  </label>
-        <input type="text"  pInputText >  
+        <input type="text"  formControlName="USSFNumber" pInputText >  
         <br><br>
         
         <label for="Contact Name" style="font-size: 30px;font-weight: 500;">Contact Name:  </label>
-            <input type="text"  pInputText > 
-            <input type="text"  pInputText > 
+            <input type="text"  formControlName="firstname" pInputText > 
+            <input type="text"  formControlName="lastname" pInputText > 
             <br><br>
     
            
     
             <label for="City/State/Zip" style="font-size: 30px;font-weight: 500;">City/State/Zip:  </label>
             <input type="text"  pInputText > 
-            <input type="text"  pInputText > 
+            <input type="text"  formControlName="state" pInputText > 
             <input type="text"  pInputText >
             <br><br>
     
@@ -52,12 +54,16 @@
     <tr><td>
         <h1>Experience and Availability </h1>
 
+        <label for="agebracket" style="font-size: 30px;font-weight: 500;">Age Bracket:  </label>
+        <input type="text" formControlName="agebracket" pInputText > 
+        <br><br>
+
         <br><label for="Referee Grade:  " style="font-size: 30px;font-weight: 500;">Referee Grade:  </label>
-        <p-dropdown [options]="number1"  optionLabel="name" ></p-dropdown>
+        <p-dropdown [options]="number1"  formControlName="refereegrade" optionLabel="name" ></p-dropdown>
         <br><br>
 
         <label for="Number of Years as USSF Referee" style="font-size: 30px;font-weight: 500;">Number of years as USSF Referee:  </label>
-            <input type="text"  pInputText > 
+            <input type="text" formControlName="exp" pInputText > 
             <br><br>
 
             <label for="Age" style="font-size: 30px;font-weight: 500;">Age:  </label>
@@ -75,9 +81,9 @@
     
     </td></tr>
     <tr style="display: flex;justify-content: center;padding: 2rem;"><td>
-        <button pButton type="button" label="Submit" ></button>
+        <button pButton type="button" label="Submit" (click)="submit()"></button>
     </td></tr>
 
 </table>
-
+</form>
 </div>
