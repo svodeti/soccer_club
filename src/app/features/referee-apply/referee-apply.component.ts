@@ -44,7 +44,7 @@ export class RefereeApplyComponent implements OnInit {
 
       approved:[false]
     });
-    let applications = localStorage.getItem("applications");
+    let applications = localStorage.getItem("refereeapplications");
     if(applications)
       this.refereeApplications = JSON.parse(applications);
     
@@ -56,7 +56,7 @@ export class RefereeApplyComponent implements OnInit {
     this.refereeForm.controls.refereeId.setValue(this.refereeApplications.length+1);
     refereeApplications.push(this.refereeForm.value)
     this.refereeApplications.push(...refereeApplications);
-    localStorage.setItem('applications', JSON.stringify(this.refereeApplications))
+    localStorage.setItem('refereeapplications', JSON.stringify(this.refereeApplications))
   }
   
 

@@ -19,8 +19,8 @@ export class RefereeAdminComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let refereeApplications = JSON.parse(localStorage.getItem('applications'));
-    
+    let refereeApplications = JSON.parse(localStorage.getItem('refereeapplications'));
+    if(refereeApplications)
     this.refereeApplications = refereeApplications;
     this.refereeApplications.forEach(element => {
       if(element.approved){
@@ -47,15 +47,15 @@ export class RefereeAdminComponent implements OnInit {
 
   approve(refereeId){
     this.refereeApplications.forEach(element => {
-      if(element.teamId == refereeId){
+      if(element.refereeId == refereeId){
         element.approved = true;
       }
     });
-    localStorage.setItem('applications', JSON.stringify(this.refereeApplications));
+    localStorage.setItem('refereeapplications', JSON.stringify(this.refereeApplications));
     this.referees = [];
     this.refereeApplications.forEach(element => {
       if(element.approved){
-        let x = { name: element.teamname};
+        let x = { name: element.firstname};
         this.referees.push(x);
       }
     });
