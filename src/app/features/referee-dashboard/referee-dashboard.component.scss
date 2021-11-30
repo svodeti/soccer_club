@@ -100,17 +100,5 @@
                      placeholder="Select location"></p-dropdown>
                 </div>
                 <div style="display: flex;margin-right: 2rem;">
-                    <button pButton type="button" label="Add Schedule" style="display: flex;justify-content: flex-end;"
-                    (click)="addSchedule()"></button>
-                </div>
-            </div>
-            <p-table [value]="schedule" responsiveLayout="scroll">
-                <ng-template pTemplate="header">
-                    <tr>
-                        <th>No.</th>
-                        <th>Referee Name</th>
-                        <th>Time</th>
-                        <th>Location</th>
-                    </tr>
-                </ng-template>
+
    
