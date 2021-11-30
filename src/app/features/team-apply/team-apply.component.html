@@ -15,7 +15,7 @@
         }
         </style>
     <div style ="padding : 2 rem;">
-
+        <form [formGroup]="teamForm"  autocomplete="off">  
     <table style="width:100% ;"> <tr style="font-size:30px"><th><h1>Apply to the 2022 adidas Warrior Memorial Day Classic </h1></th> </tr>
 
 
@@ -23,31 +23,31 @@
     <tr><td>
         <h1> Team Information </h1>
         <br><label for="Application Group:  " style="font-size: 30px;font-weight: 500;">Application Group:  </label>
-        <p-dropdown [options]="groups"  optionLabel="name" ></p-dropdown>
+        <p-dropdown [options]="groups" formControlName="agegroup"  optionLabel="name" ></p-dropdown>
         <br><br>
 
         <label for="Team Name" style="font-size: 30px;font-weight: 500;">Team Name:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="teamname" pInputText > 
         <br><br>
 
         <label for="DOB of oldest Player" style="font-size: 30px;font-weight: 500;">DOB of oldest Player:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="oldestplayer" pInputText > 
         <br><br>
 
         <label for="Coach's Name" style="font-size: 30px;font-weight: 500;">Coach's Name:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="coachname" pInputText > 
         <br><br>
 
         <label for="Team City" style="font-size: 30px;font-weight: 500;">Team city:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="teamcity"  pInputText > 
         <br><br>
 
         <label for="Team State" style="font-size: 30px;font-weight: 500;">Team state:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="teamstate"  pInputText > 
         <br><br>
 
         <label for="Team Website" style="font-size: 30px;font-weight: 500;">Team Website:  http://</label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="teamwebsite"  pInputText > 
         <br><br>
 
         <label for="Culb Website" style="font-size: 30px;font-weight: 500;">Club Website: http://</label>
@@ -55,29 +55,29 @@
         <br><br>
 
         <label for="Club Name" style="font-size: 30px;font-weight: 500;">Club Name:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="clubname"  pInputText > 
         <br><br>
 
         <label for="Association" style="font-size: 30px;font-weight: 500;">Association:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="association" pInputText > 
         <br><br>
 
         <label for="League" style="font-size: 30px;font-weight: 500;">League:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="league"  pInputText > 
         <br><br>
 
 
         <br><label for="Play Level Desired:  " style="font-size: 30px;font-weight: 500;">Play level Desired:  </label>
-        <p-dropdown [options]="playlevel"  optionLabel="name" ></p-dropdown>
+        <p-dropdown [options]="playlevel" formControlName="playlevel"  optionLabel="name" ></p-dropdown>
         <br><br>
 
 
         <br><label for="Primary Jersey color:  " style="font-size: 30px;font-weight: 500;">Primary Jersey Color:  </label>
-        <p-dropdown [options]="color"  optionLabel="name" ></p-dropdown>
+        <p-dropdown [options]="color" formControlName="primaryjerseycolor" optionLabel="name" ></p-dropdown>
         <br><br>
 
         <br><label for="Alt Jersey color:  " style="font-size: 30px;font-weight: 500;">Alt Jersey Color:  </label>
-        <p-dropdown [options]="color"  optionLabel="name" ></p-dropdown>
+        <p-dropdown [options]="color" formControlName="altjerseycolor" optionLabel="name" ></p-dropdown>
         <br><br>
 
     </td>
@@ -86,7 +86,7 @@
 <tr><td>
     <h1>Contact Information </h1>
     <label for="Contact Name" style="font-size: 30px;font-weight: 500;">Contact Name:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="contactname" pInputText > 
         <input type="text"  pInputText > 
         <br><br>
 
@@ -101,12 +101,12 @@
         <br><br>
 
         <label for="Primary Email Address" style="font-size: 30px;font-weight: 500;">Primary Email Address:  </label>
-        <input type="text"  pInputText > 
+        <input type="text"  formControlName="email" pInputText > 
         <br><br>
 
 
         <label for="Phone" style="font-size: 30px;font-weight: 500;">Phone:  </label>
-        <input type="text"  pInputText > 
+        <input type="text" formControlName="phone"  pInputText > 
         <br><br>
 
 
@@ -187,10 +187,11 @@
 </td></tr>
 
 <tr style="display: flex;justify-content: center;padding: 2rem;"><td>
-    <button pButton type="button" label="Submit" ></button>
+    <button pButton type="button" label="Submit"(click)="submit()" ></button>
 </td></tr>
 
-</table>
+    </table>
+    </form>
 
 </div>
 

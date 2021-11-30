@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
 
+  teamApplications:any = [];
   schedule:any=[];
   teams:any = [];
   locations:any = [];
@@ -17,10 +18,7 @@ export class AdminComponent implements OnInit {
   teamB:any;
   count:number = 0;
   constructor(private router: Router) {
-    this.teams = [
-      { name: 'team-1'},
-      { name: 'team-2'}
-    ]
+  
     this.locations = [
       { name: 'location-1'},
       { name: 'location-2'}
@@ -29,6 +27,15 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
     //this.router.navigateByUrl('/login')
+    let teamApplications = JSON.parse(localStorage.getItem('applications'));
+    
+    this.teamApplications = teamApplications;
+    this.teamApplications.forEach(element => {
+      if(element.approved){
+        let x = { name: element.teamname};
+        this.teams.push(x);
+      }
+    });
   }
   addSchedule(){
     if(this.teamA && this.teamB && this.dateTime && this.location){
@@ -39,6 +46,21 @@ export class AdminComponent implements OnInit {
     else{
       alert("Fields cannot be empty")
     }
+  }
+  approve(teamId){
+    this.teamApplications.forEach(element => {
+      if(element.teamId == teamId){
+        element.approved = true;
+      }
+    });
+    localStorage.setItem('applications', JSON.stringify(this.teamApplications));
+    this.teams = [];
+    this.teamApplications.forEach(element => {
+      if(element.approved){
+        let x = { name: element.teamname};
+        this.teams.push(x);
+      }
+    });
   }
 
 }
