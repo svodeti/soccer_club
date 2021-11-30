@@ -38,6 +38,20 @@ exports.create = (req, res) => {
     });
 };
 
+// Delete sponsor from the database
+
+exports.deleteSponsor = (req,res)=> {
+  Sponsors.destroy({
+    where: {
+      email_id: req.body.email_id
+    }
+  }).then(result => {
+    res.send(result)
+    }).catch(error => {
+    console.log(error)
+  })
+}
+
 // Retrieve all sponsors from the database.
 exports.findAll = (req, res) => {
 
