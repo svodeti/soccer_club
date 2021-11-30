@@ -85,6 +85,11 @@ const routes: Routes = [
     loadChildren : () => import ("./features/events/events.module")
     .then( (m) => m.EventsModule)
   },
+  {
+    path: "referee-dashboard",
+    loadChildren : () => import ("./features/referee-dashboard/referee-dashboard.module")
+    .then( (m) => m.RefereeDashboardModule)
+  },
 ];
 
 @NgModule({
