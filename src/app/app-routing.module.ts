@@ -26,7 +26,7 @@ const routes: Routes = [
     .then( (m) => m.CoachModule)
   },
   {
-    path: "login",
+    path: "login/:id",
     loadChildren : () => import ("./features/login/login.module")
     .then( (m) => m.LoginModule)
   },

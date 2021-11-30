@@ -1,6 +1,6 @@
 <div style="padding: 2rem; display: flex; flex-direction: column;width:80%;margin:0 auto"
  *ngIf="flag">
-    <p-table [value]="products" responsiveLayout="scroll">
+    <p-table [value]="teamApplications" responsiveLayout="scroll">
         <ng-template pTemplate="header">
             <tr>
                 <th>Code</th>
@@ -10,14 +10,14 @@
                 <th>Schedule</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-product>
-            <tr>
-                <td>{{product.code}}</td>
-                <td>{{product.team}}</td>
-                <td>{{product.coach}}</td>
-                <td>{{product.color}}</td>
+        <ng-template pTemplate="body" let-product  >
+            <tr *ngIf="product.approved">
+                <td>A{{product.teamId}}</td>
+                <td>{{product.teamname}}</td>
+                <td>{{product.coachname}}</td>
+                <td>{{product.primaryjerseycolor}}</td>
                 <td> <button pButton type="button" label="See Schedule" 
-                    (click)="seeSchedule()"></button></td>
+                    (click)="seeSchedule(product.teamname)"></button></td>
             </tr>
         </ng-template>
     </p-table>
@@ -38,8 +38,8 @@
         <ng-template pTemplate="body" let-product>
             <tr>
                 <td>{{product.no}}</td>
-                <td>{{product.team1}}</td>
-                <td>{{product.team2}}</td>
+                <td>{{product.teamA}}</td>
+                <td>{{product.teamB}}</td>
                 <td>{{product.time}}</td>
                 <td>{{product.location}}</td>
             </tr>

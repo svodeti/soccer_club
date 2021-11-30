@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   teamApplications:any = [];
-  schedule:any=[];
+  teamSchedule:any=[];
   teams:any = [];
   locations:any = [];
   location:any;
@@ -17,8 +17,10 @@ export class AdminComponent implements OnInit {
   teamA:any;
   teamB:any;
   count:number = 0;
+  teamScheduleStorage:any = [];
   constructor(private router: Router) {
-  
+    if(!localStorage.getItem('adminLoggedIn'))
+         localStorage.setItem('adminLoggedIn',"false")
     this.locations = [
       { name: 'location-1'},
       { name: 'location-2'}
@@ -26,10 +28,13 @@ export class AdminComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    //this.router.navigateByUrl('/login')
+    if(localStorage.getItem('adminLoggedIn') == "false")
+      this.router.navigateByUrl('/login/1')
     let teamApplications = JSON.parse(localStorage.getItem('applications'));
-    
+    let teamScheduleStorage = JSON.parse(localStorage.getItem('teamSchedule'));
     this.teamApplications = teamApplications;
+    if(teamScheduleStorage)
+    this.teamSchedule = teamScheduleStorage;
     this.teamApplications.forEach(element => {
       if(element.approved){
         let x = { name: element.teamname};
@@ -41,7 +46,8 @@ export class AdminComponent implements OnInit {
     if(this.teamA && this.teamB && this.dateTime && this.location){
       this.count++;
       let x = { no:this.count, teamA : this.teamA,teamB: this.teamB, time:this.dateTime, location:this.location}
-      this.schedule.push(x);
+      this.teamSchedule.push(x);
+      localStorage.setItem('teamSchedule', JSON.stringify(this.teamSchedule))
     }
     else{
       alert("Fields cannot be empty")

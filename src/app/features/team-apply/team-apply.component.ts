@@ -130,15 +130,12 @@ this.result = [
     let applications = localStorage.getItem("applications");
     if(applications)
       this.teamApplications = JSON.parse(applications);
-    
-    console.log(this.teamApplications)
   }
 
   submit(){
     let teamApplications:any = [];
     let number = this.randomNumber();
     this.teamForm.controls.teamId.setValue(this.teamApplications.length+1);
-      console.log();
     this.teamForm.controls.performance.setValue(number);
     teamApplications.push(this.teamForm.value)
     this.teamApplications.push(...teamApplications);
