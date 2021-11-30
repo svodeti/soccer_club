@@ -45,6 +45,7 @@ export class AppComponent {
             },
             {
               label: 'FAQS',
+              routerLink:['/faq'],
               routerLinkActiveOptions: { exact: true }  
             },
             {

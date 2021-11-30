@@ -42,6 +42,11 @@ const routes: Routes = [
     .then( (m) => m.SponsorDetailModule)
   },
   {
+    path: "faq",
+    loadChildren : () => import ("./features/faq/faq.module")
+    .then( (m) => m.FaqModule)
+  },
+  {
     path: "referee-details",
     loadChildren : () => import ("./features/refereedetail/refereedetail.module")
     .then( (m) => m.RefereeDetailModule)
