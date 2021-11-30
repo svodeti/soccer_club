@@ -34,6 +34,7 @@ export class RefereeApplyComponent implements OnInit {
 
     this.refereeForm= this.fb.group({
       USSFNumber: [],
+      refereeId: [],
       firstname: [],
       lastname: [],
       state: [],
@@ -50,6 +51,13 @@ export class RefereeApplyComponent implements OnInit {
     console.log(this.refereeApplications)
   }
   
+  submit(){
+    let refereeApplications:any = [];
+    this.refereeForm.controls.refereeId.setValue(this.refereeApplications.length+1);
+    refereeApplications.push(this.refereeForm.value)
+    this.refereeApplications.push(...refereeApplications);
+    localStorage.setItem('applications', JSON.stringify(this.refereeApplications))
+  }
   
 
 }

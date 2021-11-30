@@ -45,9 +45,9 @@ export class RefereeAdminComponent implements OnInit {
     }
   }
 
-  approve(teamId){
+  approve(refereeId){
     this.refereeApplications.forEach(element => {
-      if(element.teamId == teamId){
+      if(element.teamId == refereeId){
         element.approved = true;
       }
     });
