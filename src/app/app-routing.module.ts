@@ -85,6 +85,11 @@ const routes: Routes = [
     loadChildren : () => import ("./features/events/events.module")
     .then( (m) => m.EventsModule)
   },
+  {
+    path: "maps",
+    loadChildren : () => import ("./features/maps/maps.module")
+    .then( (m) => m.MapsModule)
+  },
 ];
 
 @NgModule({

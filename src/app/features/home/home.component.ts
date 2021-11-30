@@ -29,5 +29,8 @@ export class HomeComponent implements OnInit {
   navigateEvents(){
     this.router.navigateByUrl('/events')
   }
+  navigateMaps(){
+    this.router.navigateByUrl('/maps')
+  }
 
 }
