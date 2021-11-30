@@ -1,0 +1,51 @@
+<div style="display: flex; width: 100%;flex-direction: column;">
+    <p-carousel [value]="cars" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000" [circular]="true">
+        <ng-template pTemplate="header">
+        </ng-template>
+        <ng-template let-car pTemplate="item">
+            <img src="./assets/{{car.id}}" width="2304" height="540"/>
+        </ng-template>
+    </p-carousel>
+    <div style="padding: 2rem 3rem; display: flex;width: 100%;justify-content: space-between;">
+        <div style="display: flex;width:60%;flex-direction: column;justify-content: center;">
+            <div style="display: flex;width:100%;font-size: 32px;font-weight: bolder;justify-content: center;">
+                Arizona's Largest Football Tournament Host
+            </div>
+            <div style="display: flex;width:100%;font-size: 24px;padding: 2rem 3rem 0 3rem">
+                Soccer club is recognized as the one the largest football hosting in Arizona.
+                The USL Championship is one of the most successful professional soccer leagues in the world,
+                reaching a population of more than 84 million and fueling the growth of the game across North America. 
+                In 2018, The Championship had the biggest season in its history, with almost 3 million fans attending games 
+                over the league’s regular season and postseason.
+                The USL Super League is a second-division professional women's soccer league expected to begin play in 2023. 
+                Furthering the USL’s commitment to advancing the women’s game, unifying communities, and fueling the growth 
+                of the sport, the USL Super League aims to double the number of professional women’s soccer teams in the United States
+                by its inaugural season.
+
+            </div>
+        </div>
+        <div style="display: flex;width:30%;justify-content: center;">
+            <img src="./assets/4.jpg" width="400" height="400" />
+        </div>
+    </div>
+    <div style="display: flex; padding: 2rem 3rem;width: 100%;">
+        <div style="width:100%;height: 300px;display: flex; justify-content: space-around;">
+            <div style="width:20%;height:100%;display: flex;align-items:center;justify-content:center;
+            background-color: rosybrown;border-radius: 50%;flex-direction: column;">
+                    <div style="padding-bottom: 2rem;font-size: 24px; font-weight: bold;">Maps</div>
+                    <i class="pi pi-map" style="font-size: 100px;font-weight: 500;"></i>
+            </div>
+            <div style="width:20%;height:100%;display: flex;background-color: rosybrown;border-radius: 50%;
+            display: flex;align-items:center;justify-content:center;flex-direction: column;" (click)="navigateEvents()">
+             <div style="padding-bottom: 2rem;font-size: 24px; font-weight: bold;">Events</div>
+                <i class="pi  pi-calendar-plus" style="font-size: 100px;font-weight: 500;"></i>
+            </div>
+            <div style="width:20%;height:100%;display: flex;background-color: rosybrown;border-radius: 50%;
+            align-items:center;justify-content:center;flex-direction: column;" (click)="navigateRules()">
+                <div style="padding-bottom: 2rem;font-size: 24px; font-weight: bold;">Rules</div>
+                <i class="pi  pi-list" style="font-size: 100px;font-weight: 500;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
