@@ -11,3 +11,112 @@
   <app-root></app-root>
 </body>
 </html>
+<html>
+<head>
+<title>Soccer Manager</title>
+
+</head>
+<body>
+    <link rel="stylesheet" href="soccer.css"/>
+<script src="soccer.js"></script>
+
+<center>
+<h1>
+Soccer Manager
+</h1>
+<div>
+
+<table>
+<tr>
+<th>Total Children</th>
+<td id="total">0</td>
+</tr>
+<tr>
+<th>Junior</th>
+<td id="junior">0</td>
+</tr>
+           <tr>
+<th>Name(s)</th>
+<td id="j_name"></td>
+</tr>
+<tr>
+<th>Intermediate</th>
+<td id="intermediate">0</td>
+</tr>
+           <tr>
+<th>Name(s)</th>
+<td id="i_name"></td>
+</tr>
+<tr>
+<th>Senior</th>
+<td id="senior">0</td>
+</tr>
+           <tr>
+<th>Name(s)</th>
+<td id="s_name"></td>
+</tr>
+</table>
+
+           <input type="text" placeholder="Full Name" id="name">
+           <input type="number" placeholder="Age" id="age">
+          
+<button onclick="addAge()">Add</button>
+</div>
+</center>
+</body>
+</html>
+
+JavaScript code:
+
+function addAge(){
+  
+// gets the input age
+var age = Number(document.getElementById("age").value);
+
+// clears the input field
+document.getElementById("age").value = "";
+         
+// checks if age is between 4 and 15
+if(age>=4&&age<=15){
+// table cell to display total number of children
+var total = document.getElementById("total");
+          
+// table cell to display total number of junior
+var junior = document.getElementById("junior");
+                 
+// table cell to display total number of intermediate
+var intermediate = document.getElementById("intermediate");
+                    
+// table cell to display total number of senior
+var senior = document.getElementById("senior");
+         
+// increase total number of children by 1
+total.innerHTML = Number(total.innerHTML) + 1;
+
+           // if its a junior age
+           if(age<=7)
+
+           // increase total number of junior by 1
+           junior.innerHTML = Number(junior.innerHTML) + 1;
+             
+             
+           // if its a intermediate age
+           else if(age<=11)
+
+           // increase total number of intermediate by 1
+           intermediate.innerHTML = Number(intermediate.innerHTML) + 1;
+             
+             
+           // else it will be a senior age
+           else
+
+           // increase total number of senior by 1
+           senior.innerHTML = Number(senior.innerHTML) + 1;
+             
+}
+         
+// if age is not between 4 and 15 alert an error
+else{
+window.alert("Age should be between 4 and 15");
+}
+}
