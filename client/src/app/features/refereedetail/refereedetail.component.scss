@@ -1,0 +1,40 @@
+.sponsor-details {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.details {
+    font-size: 18px;
+    min-width: 200px;
+}
+
+.accept_container {
+    display: flex;
+    justify-content:space-around;
+    min-width: 400px;
+    flex-direction: row;
+}
+
+.accept , .reject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 20px;
+}
+
+.accept {
+    background-color: #04AA6D;  
+}
+
+.reject {
+    background-color: #EB453D;
+}

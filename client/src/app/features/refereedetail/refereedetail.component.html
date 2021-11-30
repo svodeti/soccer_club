@@ -1,0 +1,21 @@
+<div class="sponsor-details">
+    <h2>Referee Details</h2>
+    <br><br>
+    <div class="details">
+        <p><strong>Name:</strong> {{referee.name}}</p>
+        <p><strong>Email Id:</strong> {{referee.email_id}}</p>
+        <p><strong>Mobile No:</strong> {{referee.mobile_number}}</p>
+        <p><strong>Acceptance state:</strong> {{referee.acceptance_status}}</p>
+
+        <div class="accept_container">
+            <div class="accept" (click)="accept()">
+                <p>Accept</p>
+            </div>
+            <div class="reject" (click)="reject()">
+                <p>Reject</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
