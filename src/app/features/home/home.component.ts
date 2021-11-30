@@ -26,5 +26,8 @@ export class HomeComponent implements OnInit {
   navigateRules(){
     this.router.navigateByUrl('/rules')
   }
+  navigateEvents(){
+    this.router.navigateByUrl('/events')
+  }
 
 }

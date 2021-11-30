@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EventsComponent } from './events.component';
+import { RefereeAdminComponent } from './referee-admin.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: EventsComponent
+    component: RefereeAdminComponent
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EventsRoutingModule { }
+export class RefereeAdminRoutingModule { }
