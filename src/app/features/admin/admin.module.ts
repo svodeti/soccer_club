@@ -7,6 +7,10 @@ import { AdminComponent } from './admin.component';
 import {TabViewModule} from 'primeng/tabview';
 import {PanelModule} from 'primeng/panel';
 import {ButtonModule} from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
+import {CalendarModule} from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [AdminComponent],
@@ -15,7 +19,11 @@ import {ButtonModule} from 'primeng/button';
     AdminRoutingModule,
     TabViewModule,
     PanelModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule,
+    CalendarModule,
+    FormsModule,
+    TableModule
   ]
 })
 export class AdminModule { }
